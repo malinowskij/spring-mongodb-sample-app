@@ -28,4 +28,9 @@ public class BookController {
     public Book findById(@PathVariable String id) {
         return bookService.findById(id);
     }
+
+    @GetMapping("/title/{title}")
+    public List<Book> findByTitle(@PathVariable String title) {
+        return bookService.findByTitle(title);
+    }
 }

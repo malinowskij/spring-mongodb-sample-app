@@ -10,8 +10,6 @@ import pl.net.malinowski.library.repositories.AuthorRepository;
 import pl.net.malinowski.library.repositories.BookRepository;
 import pl.net.malinowski.library.repositories.PublisherRepository;
 
-import java.time.Year;
-
 @Component
 public class ApplicationStartup implements ApplicationListener<ApplicationReadyEvent> {
 
@@ -41,5 +39,11 @@ public class ApplicationStartup implements ApplicationListener<ApplicationReadyE
 
         Book book = new Book("Krzyżacy", 1900, author, publisher);
         bookRepository.save(book);
+
+        Author author1 = new Author("Adam", "Mickiewicz");
+        authorRepository.save(author1);
+
+        Book book1 = new Book("Dziady częsć II", 1823, author1, publisher);
+        bookRepository.save(book1);
     }
 }

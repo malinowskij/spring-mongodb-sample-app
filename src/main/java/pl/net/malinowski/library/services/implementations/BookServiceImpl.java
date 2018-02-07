@@ -30,4 +30,9 @@ public class BookServiceImpl implements BookService {
     public Book findById(String id) {
         return bookRepository.findOne(id);
     }
+
+    @Override
+    public List<Book> findByTitle(String title) {
+        return bookRepository.findByTitle(title);
+    }
 }
