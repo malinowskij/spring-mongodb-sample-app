@@ -14,4 +14,8 @@ public class Publisher {
     private String id;
 
     private String organizationName;
+
+    public Publisher(String organizationName) {
+        this.organizationName = organizationName;
+    }
 }
