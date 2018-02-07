@@ -10,7 +10,7 @@ import pl.net.malinowski.library.repositories.AuthorRepository;
 import pl.net.malinowski.library.repositories.BookRepository;
 import pl.net.malinowski.library.repositories.PublisherRepository;
 
-import java.time.LocalDate;
+import java.time.Year;
 
 @Component
 public class ApplicationStartup implements ApplicationListener<ApplicationReadyEvent> {
@@ -39,7 +39,7 @@ public class ApplicationStartup implements ApplicationListener<ApplicationReadyE
         Publisher publisher = new Publisher("Amber");
         publisherRepository.save(publisher);
 
-        Book book = new Book("Krzyżacy", LocalDate.ofYearDay(1900, 1), author, publisher);
+        Book book = new Book("Krzyżacy", 1900, author, publisher);
         bookRepository.save(book);
     }
 }
